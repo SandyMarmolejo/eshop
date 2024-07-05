@@ -1,11 +1,10 @@
-<!-- src/app/components/product-list/product-list.component.html -->
 <div *ngFor="let group of groupedProducts">
-  <h2>{{ group.category }}</h2>
+  <h2 class="category-item">{{ group.category }}</h2>
   <div *ngFor="let product of group.products" (click)="goToProductDetail(product)" class="product-item">
     <img [src]="product.image" alt="{{ product.name }}">
     <h3>{{ product.name }}</h3>
     <p>${{ product.price }}</p>
-    <button (click)="addToCart(product); $event.stopPropagation()">Add to Cart</button>
+    <button (click)="addToCart(product); $event.stopPropagation()">Agregar</button>
   </div>
 </div>
 

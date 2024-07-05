@@ -16,9 +16,9 @@ export interface Product {
 })
 export class ProductService {
   private products: Product[] = [
-    { id: 1, name: 'Leche', price: 1.5, image: '../../assets/leche.jpeg', category: 'Lacteos', description: 'Leche fresca de granja.' },
-    { id: 2, name: 'Queso', price: 1.0, image: '../../assets/queso.jpeg', category: 'Lacteos', description: 'Queso fresco pasteurizado.' },
-    { id: 3, name: 'Jamonada', price: 2.5, image: '../../assets/jamon.jpeg', category: 'Embutidos', description: 'Jamonada de pollo premium.' }
+    { id: 1, name: 'Leche Ideal tarro', price: 1.5, image: '../../assets/leche.jpeg', category: 'Lacteos', description: 'Leche fresca de granja.' },
+    { id: 2, name: 'Queso Fresco Bonle', price: 1.0, image: '../../assets/queso.jpeg', category: 'Lacteos', description: 'Queso fresco pasteurizado.' },
+    { id: 3, name: 'Jamonada San Fernando', price: 2.5, image: '../../assets/jamon.jpeg', category: 'Embutidos', description: 'Jamonada de pollo premium.' }
   ];
 
   getProducts() {

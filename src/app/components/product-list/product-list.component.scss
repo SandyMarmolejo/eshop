@@ -1,4 +1,7 @@
-/* src/app/components/product-list/product-list.component.scss */
+.category-item {
+  padding: 20px;
+  font-size: 18px;
+}
 .product-item {
   cursor: pointer;
   margin-bottom: 20px;
@@ -20,6 +23,7 @@
 
   p {
     margin: 10px 0;
+    
   }
 
   button {
@@ -34,5 +38,11 @@
     &:hover {
       background-color: #0056b3;
     }
+  }
+}
+
+@media (max-width: 1200px) {
+  .category-item {
+    font-size: 14px;
   }
 }
