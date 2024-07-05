@@ -1,0 +1,15 @@
+<div class="container" *ngIf="product">
+    <div class="card" style="width: 18rem;">
+      <!-- Utiliza el operador de navegación segura (?) para acceder a las propiedades de 'product' -->
+      <img src="{{product?.image}}" class="card-img-top" alt="{{product?.name}}">
+      <div class="card-body">
+        <h5 class="card-title">{{product?.name}}</h5>
+        <p class="card-text">${{product?.price}}</p>
+        <p *ngIf="product.description">{{ product.description }}</p>
+        <button *ngIf="product" (click)="addToCart(product!)" class="btn btn-primary">Agregar</button>
+      </div>
+    </div>
+  </div>
+  
+  
+  

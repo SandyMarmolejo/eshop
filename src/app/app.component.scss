@@ -1,0 +1,25 @@
+/* src/app/app.component.scss */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f9fa;
+  }
+  
+  .btn {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  
+
+  .eshop-logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      max-height: 50px;
+      cursor: pointer;
+    }
+  }
+
