@@ -26,6 +26,9 @@ export class CartDialogComponent implements OnInit {
     this.calculateTotal();
   }
 
+  getProductTotal(product: Product): number {
+    return product.price * (product.quantity || 1);
+  }
   calculateTotal(): void {
     this.total = this.products.reduce((acc, product) => acc + (product.price * (product.quantity || 1)), 0);
   }

@@ -2,8 +2,8 @@
 <div *ngFor="let product of products" class="cart-item">
   <img [src]="product.image" alt="{{product.name}}" />
   <div>
-    <h3>{{product.name}}</h3>
-    <p>${{product.price}}</p>
+    <h3>{{product.name}}  </h3>
+    <p>${{product.price}} x {{product.quantity}} {{ product.quantity === 1 ? 'unid' : 'unidades' }}</p>
   </div>
 </div>
 <hr />

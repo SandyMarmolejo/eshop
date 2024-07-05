@@ -1,6 +1,7 @@
 // src/app/components/product-detail/product-detail.component.ts
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService, Product } from '../../services/product.service';
 import { CartService } from '../../services/cart.service';
@@ -17,6 +18,7 @@ export class ProductDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private location: Location,
     private productService: ProductService,
     private cartService: CartService
   ) { }
@@ -33,5 +35,9 @@ export class ProductDetailComponent implements OnInit {
 
   addToCart(product: Product) {
     this.cartService.addToCart(product);
+  }
+
+  goBack(): void {
+    this.location.back(); // Retrocede en el historial del navegador
   }
 }

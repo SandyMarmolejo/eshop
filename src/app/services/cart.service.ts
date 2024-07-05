@@ -39,4 +39,8 @@ export class CartService {
     this.cart = [];
     this.cartCount.next(0);
   }
+  updateCartCount(): void {
+    const totalItems = this.cart.reduce((count, item) => count + (item.quantity || 0), 0);
+    this.cartCount.next(totalItems);
+  }
 }

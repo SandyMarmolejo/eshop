@@ -1,6 +1,8 @@
 <div class="container" *ngIf="product">
+
+  <button mat-button class="back-button" (click)="goBack()">Regresar</button>
     <div class="card" style="width: 18rem;">
-      <!-- Utiliza el operador de navegación segura (?) para acceder a las propiedades de 'product' -->
+
       <img src="{{product?.image}}" class="card-img-top" alt="{{product?.name}}">
       <div class="card-body">
         <h5 class="card-title">{{product?.name}}</h5>
